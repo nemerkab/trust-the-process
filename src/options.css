@@ -1,0 +1,85 @@
+:root {
+  --bg: #f6f3ee;
+  --surface: #ffffff;
+  --fg: #16181c;
+  --muted: #5d6068;
+  --border: #e2ddd5;
+  --accent: #3d55d6;
+  --accent-fg: #ffffff;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d0f12;
+    --surface: #16191e;
+    --fg: #f4f2ee;
+    --muted: #a3a6ad;
+    --border: #2a2e35;
+    --accent: #9fb0ff;
+    --accent-fg: #0d0f12;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 15px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+main { max-width: 620px; margin: 0 auto; padding: 48px 16px 64px; }
+
+header { display: flex; gap: 14px; align-items: center; margin-bottom: 32px; }
+h1 { margin: 0; font-size: 26px; letter-spacing: -0.02em; }
+.lede { margin: 2px 0 0; color: var(--muted); }
+
+section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+h2 { margin: 0 0 12px; font-size: 15px; }
+
+label { display: block; font-weight: 500; margin-bottom: 6px; }
+input[type="text"], textarea {
+  width: 100%;
+  padding: 9px 11px;
+  margin-bottom: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--fg);
+  font: inherit;
+}
+textarea { resize: vertical; font-family: ui-monospace, Menlo, monospace; font-size: 14px; }
+section > :last-child { margin-bottom: 0; }
+
+.hint { margin: 0; color: var(--muted); font-size: 13px; }
+.toggle { display: flex; gap: 10px; align-items: center; margin: 0; }
+.toggle + .hint { margin-top: 8px; }
+
+.checks { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.checks label { display: flex; gap: 6px; align-items: center; margin: 0; font-weight: 400; }
+
+input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--accent); }
+
+.actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+button {
+  font: inherit;
+  font-weight: 500;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--accent-fg);
+  cursor: pointer;
+}
+button.secondary { background: transparent; color: var(--fg); border-color: var(--border); }
+#status { color: var(--muted); font-size: 14px; }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }

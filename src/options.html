@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trust the Process — Settings</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <img src="../icons/icon48.png" alt="" width="40" height="40" />
+      <div>
+        <h1>Trust the Process</h1>
+        <p class="lede">Soft-block Gmail so you reach for your agents instead of your inbox.</p>
+      </div>
+    </header>
+
+    <form id="form">
+      <section>
+        <label class="toggle">
+          <input type="checkbox" id="enabled" />
+          <span>Blocking is on</span>
+        </label>
+        <p id="snooze-status" class="hint" hidden></p>
+      </section>
+
+      <section>
+        <h2>Which accounts?</h2>
+        <label for="accounts">Email addresses to block, one per line</label>
+        <textarea id="accounts" rows="3" placeholder="you@company.com" spellcheck="false"></textarea>
+        <p class="hint">Leave empty to block every Gmail account. When set, other accounts show the overlay only for a moment while the extension reads which account is open.</p>
+      </section>
+
+      <section>
+        <h2>Message</h2>
+        <label for="headline">Headline</label>
+        <input type="text" id="headline" maxlength="80" />
+        <label for="subtitle">Subtitle</label>
+        <input type="text" id="subtitle" maxlength="120" />
+      </section>
+
+      <section>
+        <h2>Shortcuts</h2>
+        <div class="checks">
+          <label><input type="checkbox" data-shortcut="chat" /> Chat</label>
+          <label><input type="checkbox" data-shortcut="calendar" /> Calendar</label>
+          <label><input type="checkbox" data-shortcut="meet" /> Meet</label>
+          <label><input type="checkbox" data-shortcut="drive" /> Drive</label>
+          <label><input type="checkbox" data-shortcut="admin" /> Admin</label>
+        </div>
+      </section>
+
+      <section>
+        <h2>"Open email anyway" durations</h2>
+        <label for="snooze">Minutes, comma separated</label>
+        <input type="text" id="snooze" inputmode="numeric" placeholder="5, 15, 30" />
+      </section>
+
+      <div class="actions">
+        <button type="submit">Save</button>
+        <button type="button" id="reset" class="secondary">Restore defaults</button>
+        <span id="status" role="status"></span>
+      </div>
+    </form>
+  </main>
+  <script src="settings.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
