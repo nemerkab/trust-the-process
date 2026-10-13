@@ -2,6 +2,10 @@
 
 A Chrome extension that **soft-blocks Gmail** so you reach for your agents instead of your inbox.
 
+<p align="center">
+  <img src="docs/demo.gif" alt="Typing mail.google.com opens a full-screen overlay that says Trust the process, Use your agents, with shortcuts to Chat, Calendar, Meet, Drive and Admin, and an Open email anyway button that asks how long you need." width="560">
+</p>
+
 When you open `mail.google.com`, a full-screen overlay says **Trust the process — Use your agents**. It offers one-click shortcuts to the Google apps you still need (Chat, Calendar, Meet, Drive, Admin) and a deliberately quiet **Open email anyway** button for the times you really have to go in.
 
 It's a nudge, not a lock. Nothing is deleted or hidden from you, and you can always get through.
